@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pop-up Shop Generator</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Sansita+One|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles/animate.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<header>
+	<div class="wrapper">
+		<h1 class="animated zoomIn full">Pop-Up Bar Generator</h1>
+		<h1 class="animated zoomIn mobile">Pop-Up Bar Quiz</h1>
+		<p>With pop culture themed bars springing up all over, it’s time for you to get in on the action! </p>
+		<p>Make one selection from each category and you will find out which pop-up bar is the one for you!</p>
+		<a href="#ambience"><i class="fa fa-2x fa-chevron-down animated infinite swing"></i></a>
+	</div>
+</header>
+<section class="ambience" id="ambience">
+	<div class="wrapper">
+		<h2>Ambience</h2>
+		<!-- <h3>Choose your desired ambience</h3> -->
+		<form action="" novalidate>
+		<div class ="ambience-options options clearfix">
+			<div class="option">
+				<img src="images/choices/ambience-dark2.jpg" alt="Bar with Dark and Moody ambience">
+				<input type="radio" id="dark" name="ambience" data-cat="darkMoody" required="required"><label for="dark">Dark & Moody</label>
+			</div>
+			 <div class="option">
+			 	<img src="images/choices/ambience-flashy2.jpg" alt="Bar with Flashy & Boistrous ambience">
+			 	<input type="radio" id="flashy" name="ambience" data-cat="flashy" required="required"><label for="flashy">Flashy & Boisterous</label>
+			 </div>
+			 <div class="option">
+			 	<img src="images/choices/ambience-classy2.jpg" alt="Bar with Classy ambience">
+			 	<input type="radio" id="class" name="ambience" data-cat="class" required="required"><label for="class">Pure Class</label>
+			 </div>
+		</div>
+		<a href="#drink"><i class="fa fa-2x fa-chevron-down animated infinite swing"></i></a>
+	</div>
+</section>
+
+<section class="drink" id="drink">
+	<div class="wrapper">
+		<h2>Drinks</h2>
+		<!-- <h3>Choose desired drink type</h3> -->
+		 <div class="drink-options options clearfix">
+		  	<div class = "option">
+		  		<img src="images/choices/drink-beer2.jpg" alt="">
+		  		<input type="radio" id="beers" name="drink" data-cat="beers" required="required"><label for="beers">Beers</label>
+		  	</div>
+		  	<div class = "option">
+		  		<img src="images/choices/drink-cocktail2.jpg" alt="">
+		  		<input type="radio" id="cocktails" name="drink" data-cat="cocktails" required="required"><label for="cocktails">Cocktails</label>
+		  	</div>
+		  	<div class = "option">
+		  		<img src="images/choices/drink-other2.jpg" alt="">
+		  		<input type="radio" id="newDrink" name="drink" data-cat="newDrink" required="required"><label for="newDrink">A New Concoction</label>
+		  	</div>
+		</div>
+		<a href="#clientele"><i class="fa fa-2x fa-chevron-down animated infinite swing"></i></a>
+	</div>
+</section>
+<section class="clientele" id="clientele">
+	<div class="wrapper">
+		<h2>Clientele</h2>
+		<!-- <h3>Desired clientele </h3> -->
+		<div class="clientele-options options clearfix">
+			<div class = "option">
+				<img src="images/choices/clientele-younger2.jpg" alt="">
+				<input type="radio" id="young" name="clientele" data-cat="younger" required="required"><label for="young">Younger Crowd</label>
+			</div>
+			<div class = "option">
+				<img src="images/choices/clientele-business2.jpg" alt="">
+				<input type="radio" id="business" name="clientele" data-cat="business" required="required"><label for="business">Business Types</label>
+			</div>
+			<div class = "option">
+				<img src="images/choices/clientele-rough2.jpg" alt="">
+				<input type="radio" id="rough" name="clientele" data-cat="rough" required="required"><label for="rough">Rough 'n' Tumble</label>
+			</div>
+		</div>
+		<a href="#era"><i class="fa fa-2x fa-chevron-down animated infinite swing"></i></a>
+	</div>
+</section>
+<section class="era" id="era">
+	<div class="wrapper">
+		<h2>Generation</h2>
+		<!-- <h3>Choose desired era/generation</h3> -->
+		<div class="era-options options clearfix">
+			<div class = "option">
+				<img src="images/choices/era-classic2.jpg" alt="">
+				<input type="radio" id="classic" name="eraGen" data-cat="classic" required="required"><label for="classic">Classic </label>
+			</div>
+			<div class = "option">
+				<img src="images/choices/era-modern2.jpg" alt="">
+				<input type="radio" id="modern" name="eraGen" data-cat="modern" required="required"><label for="modern">Modern</label>
+			</div>
+			<div class = "option">
+				<img src="images/choices/era-elsewhere2.jpg" alt="">
+				<input type="radio" id="alternate" name="eraGen" data-cat="anotherTime" required="required"><label for="alternate">Another Time</label>
+			</div>
+		</div>
+		<input type="submit" class="submit" value="Show me my bar">
+	</form>
+</section>
+<section class="result">
+	<div class="result-wrapper wrapper" >
+		<div class="bar-details">
+			
+		</div>
+
+		<div class="bar-description-wrap clearfix">
+			
+		</div>
+
+		<div class="replay"><a href="#">Play Again</a></div>
+	</div>
+</section>
+
+<section class="error">
+	<div class="error-wrap">
+		<p class="close">X</p>
+		<p><span>Error: </span>Please make a selection from each category</p>
+	</div>
+</section>
+<footer>Designed and coded by David Missio & Tiffany Yao 2016	</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
+<script src="
+https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+
+</body>
+</html>

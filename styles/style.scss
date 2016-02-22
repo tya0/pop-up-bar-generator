@@ -1,0 +1,387 @@
+@import "normalize.scss";
+@import "placeholders-mixins.scss";
+@import "variables.scss";
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include fontSizer(16);
+	background-image: url("../assets/small-crackle-bright.png");
+	background-repeat: repeat;
+	text-align: center;
+	// padding:30px;
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 1px;
+	color: $text;
+}
+
+h1 {
+	@include fontSizer(50);
+	font-family: 'Sansita One', cursive;	
+	text-shadow: 1px 1px 1px #7B7B78;
+	color: $h1;
+	letter-spacing: 2px;
+}
+
+h2 {
+	@include fontSizer(38);
+	font-family: 'Sansita One', cursive;	
+	color: $h2;
+	margin-bottom:6%;
+	margin-top:0;
+}
+
+h3 {
+	@include fontSizer(22);
+	color: $h2;
+	text-transform: uppercase;
+}
+
+p {
+	color: $text;
+	line-height: 24px;
+	line-height: 2.4rem;
+}
+
+a {
+	text-decoration: none;
+	color: $h1;
+}
+
+section, button, input[type=submit] {
+	clear:both;
+}
+
+button, input[type=submit] {
+	margin: 0 auto;
+	margin-top: 5%;
+}
+
+footer {
+	padding: 2%;
+}
+
+.wrapper {
+	max-width: 1080px;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding:4% 4% 2% 4%;
+	h1.full {
+		display: block;
+	}
+	h1.mobile {
+		display: none;
+	}
+
+	p {
+		margin:0;
+	}
+}
+
+.options {
+	margin: 0 auto;
+	.option {
+		width: 33.3%;
+		float:left;
+		img {
+			width: 90%;
+			margin: 0 auto;
+			display: block;
+			margin-bottom: 20%;
+			position: relative;
+			border-radius: 5px;
+			&::after {
+				content: '';
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0,0,0,0.8);
+				position: absolute;
+			}
+		}
+	}
+}
+
+
+label {
+	padding:8%;
+	width: 90%;
+	margin:0 auto;
+	background: #D44146;
+	transition:all 1s;
+	border-radius: 5px;
+	display: inline-block;
+	color:white;
+	text-transform: uppercase;
+	border-radius:5px;
+	border:solid 1px #D94E3B;
+	box-shadow: 0px 9px 0px #84261a;
+	background: linear-gradient(to bottom, #FB6964 0%, #8E0726 70%, #3D3D3E 100%);
+	text-shadow: 0 1px 1px #301;
+	box-shadow: 0px 2px 5px 1px rgba(155, 155, 155, .5);
+	&:hover {
+		background: linear-gradient(to bottom, #3D3D3E 0%, #8E0726 30%, #FB6964 100%);
+		text-shadow: none;
+		cursor: pointer;
+		box-shadow: 0px 4px 0px #84261a;
+		}
+}
+
+input[type=radio] {
+	display:none;
+}
+
+input[type=radio]:checked + label{
+	color: black;
+	background: linear-gradient(to bottom, #440B0B 0%, #8F0222 30%, $h2 100%);
+	box-shadow: 0px 4px 0px #84261a;
+	text-shadow: -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
+}
+
+input[type=submit] {
+	padding: 2% 0;
+	width: 30%;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	background-color: $h1;
+	border-bottom: 4px solid #84ADAB;
+	margin-top:7%;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	position: relative;
+	&:hover {
+		border-bottom: 2px solid #84ADAB;
+		background: #48C2BE;
+		text-shadow: -1px -1px 0 $h1,  
+    1px -1px 0 $h1,
+    -1px 1px 0 $h1,
+     1px 1px 0 $h1;
+     position: relative;
+     top: 2px;
+	}
+}
+
+.bar-description-wrap {
+	// margin-bottom:5%;
+	img {
+		width: 50%;
+		float: left;
+		margin-bottom: 7%;
+		border-radius: 5px;
+		border: 3px solid $text;
+		margin-top:5%;
+	}
+	.bar-description {
+		width: 50%;
+		float: left;
+		text-align: left;
+		padding-left: 5%;
+		margin-top: 5%;
+	}
+}
+
+
+.fa-2x {
+	margin-top: 5%;
+}
+
+span.origin, span.sigDrink {
+	color: $h2;
+}
+
+.replay {
+	margin: 0 auto;
+	clear:both;
+	text-transform: uppercase;
+	a {
+		@include fontSizer(20);
+    	font-weight: 700;
+	}
+}
+
+.error {
+	display: none;
+	position: fixed;
+	background: black;
+	border: 10px solid #41D4CF;
+	border-radius: 10px;
+	background: url(../assets/small-crackle-bright.png);
+	padding:25px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	.close {
+		position: absolute;
+		top: -22px;
+		right: 8px;
+		font-size: 31px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (max-width: 940px) {
+
+	label {
+		@include fontSizer(14);
+	}
+
+	.wrapper {
+		padding: 4% 0;
+	}
+
+	.result-wrapper {
+		padding: 4%;
+		.bar-description-wrap {
+			margin-bottom:5%;
+		}
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	header .wrapper h1 {
+	}
+
+	label{
+		@include fontSizer(12);
+		}
+
+	input[type=submit] {
+		@include fontSizer(14);
+	}
+}
+
+@media only screen 
+	and (max-width: 768px) {
+
+	body {
+		padding: 5px;
+	}
+	
+	h1 {
+		@include fontSizer(45);
+	}
+
+	h2 {
+		@include fontSizer(34);
+		margin-bottom: 5%;
+	}
+
+	label {
+		padding: 6%;
+
+	}
+
+	header .wrapper {
+		padding-left:4%;
+		padding-right: 4%;
+	}
+
+	.bar-description-wrap {
+		img {
+			float: none;
+			margin: 2% 0;
+		}
+		.bar-description {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+
+@media only screen
+	and (max-width: 600px) {
+		h1 {
+			@include fontSizer(38);
+		}
+
+		label {
+			width: 100%;
+			@include fontSizer(14)
+		}
+		
+		.wrapper {
+			h1.full {
+				display: none;
+			}
+			h1.mobile {
+				display: block;
+			}
+			h2 {
+				@include fontSizer(30);
+			}
+			p {
+				line-height: 25px;
+			}
+		}
+
+		.options{
+			width: 60%;
+			margin: 0 auto;
+			.option {
+				width: 100%;
+				margin-bottom: 10%;
+
+				img {
+					width: 100%;
+					margin-bottom: 3%;
+				}
+			}
+		}
+
+		input[type=submit]{
+			width: 60%;
+			margin-top: 3%;
+			padding: 3% 0;
+		}
+
+		.bar-details {
+			h4 {
+				text-align: left;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		.bar-description-wrap {
+			img {
+				width: 80%;
+			}
+		}
+
+		.error {
+			top: 50%;
+			left: 20%;
+			transform: translate(-12%, -30%);
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.options, input[type=submit] {
+			width:80%;
+		}
+
+		input[type=submit] {
+			padding: 4% 0;
+		}
+
+		.bar-description-wrap {
+		    margin-bottom: 7%;
+		}
+
+		.result-wrapper {
+			padding-bottom: 6%;
+		}
+	}
+
+
+
